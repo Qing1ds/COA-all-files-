@@ -1,0 +1,12 @@
+这个文件，将用于输出所有有关的数据
+
+% 假设你有一个名为data的数据表
+% 这里使用一个示例数据表
+data = table([1; 2; 3], [4; 5; 6], 'VariableNames', {'Column1', 'Column2'});
+
+% 指定要保存的Excel文件名和工作表名
+filename = 'output.xlsx';
+sheet = 'Sheet1';
+
+% 使用writetable函数将数据表保存为Excel表格
+writetable(data, filename, 'Sheet', sheet);
